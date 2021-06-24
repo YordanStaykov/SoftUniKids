@@ -1,3 +1,41 @@
 .program {
-	background-color: green;
+	background-color: $secondary-900;
+}
+
+.program-wrapper {
+	display: flex;
+	margin: 75px;
+}
+
+.book-icon {
+	width: 32px;
+	height: 24px;
+	margin: 10px;
+}
+
+.course-program {
+	display: flex;
+	flex-direction: column;
+
+	select {
+		width: 675px;
+		height: 50px;
+		margin-bottom: 16px;
+		border-radius: 6px;
+		text-indent: 10px;
+	}
+}
+
+.course-program__title {
+	margin: 0;
+}
+
+.course-program__description {
+	width: 675px;
+}
+
+.laptop-img {
+	align-self: flex-end;
+	margin-left: 170px;
+	margin-bottom: 20px;
 }
