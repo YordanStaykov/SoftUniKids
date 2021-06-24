@@ -339,6 +339,13 @@ a {
   padding: 14px 32px;
 }
 
+.main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 800px 560px 800px;
+      grid-template-rows: 800px 560px 800px;
+}
+
 .header {
   position: relative;
   display: -ms-grid;
@@ -418,6 +425,10 @@ a {
 .navigation__link:hover {
   cursor: pointer;
   color: #ff9100;
+}
+
+.program {
+  background-color: green;
 }
 
 .signup-box {
@@ -506,5 +517,84 @@ a {
 .signup-box__item:nth-last-child() {
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
+}
+
+.text-and-img-container {
+  padding-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.description__text {
+  width: 740px;
+  height: 320px;
+}
+
+.description__img {
+  width: 440px;
+  height: 250px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.description__explanations {
+  margin-top: 80px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.suitable-for {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-right: 10px dotted #ffecb3;
+}
+
+.knowledge-gained {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 50px;
+}
+
+.suitable-for__content,
+.knowledge-gained__content {
+  padding: 0 30px;
+}
+
+.suitable-for__img,
+.knowledge-gained__img {
+  width: 32px;
+  height: 32px;
+}
+
+.suitable-for__title,
+.knowledge-gained__title {
+  margin: 0;
+  color: #565656;
+}
+
+.suitable-for__description,
+.knowledge-gained__description {
+  max-width: 488px;
+  color: #565656;
+}
+
+.suitable-for__description span,
+.knowledge-gained__description span {
+  font-weight: 700;
+}
+
+.certificate {
+  background-color: red;
 }
 /*# sourceMappingURL=style.css.map */
