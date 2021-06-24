@@ -341,10 +341,45 @@ a {
 
 .header {
   position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 74px 320px;
+      grid-template-rows: 74px 320px;
 }
 
-.navigation {
-  height: 74px;
+.header-info {
+  position: relative;
+  width: 100vw;
+  background-color: #44a9f8;
+  -webkit-box-shadow: inset 0 4px 5px 0 rgba(0, 0, 0, 0.14);
+          box-shadow: inset 0 4px 5px 0 rgba(0, 0, 0, 0.14);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-info__label {
+  margin-top: 64px;
+  padding: 4px 8px;
+  background-color: #ffc20a;
+  color: white;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+.header-info__title {
+  max-width: 650px;
+  text-align: center;
+  color: white;
 }
 
 .navigation-wrapper {
@@ -385,42 +420,7 @@ a {
   color: #ff9100;
 }
 
-.header-info {
-  position: relative;
-  height: 320px;
-  background-color: #44a9f8;
-  -webkit-box-shadow: inset 0 4px 5px 0 rgba(0, 0, 0, 0.14);
-          box-shadow: inset 0 4px 5px 0 rgba(0, 0, 0, 0.14);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header-info__label {
-  margin-top: 64px;
-  padding: 4px 8px;
-  background-color: #ffc20a;
-  color: white;
-  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;
-  border-radius: 2px;
-}
-
-.header-info__title {
-  max-width: 650px;
-  text-align: center;
-  color: white;
-}
-
-.sign-up-box {
+.signup-box {
   position: absolute;
   bottom: -56px;
   display: -ms-grid;
@@ -432,16 +432,12 @@ a {
   -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   border-radius: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.sign-up-box__button-container {
+.signup-box__button-container {
   height: 100%;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,20 +452,7 @@ a {
   border-right-style: dotted;
 }
 
-.sing-up-box__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.sing-up-box__text {
+.signup-box__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -477,5 +460,51 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.signup-box__first-row {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #565656;
+}
+
+.signup-box__second-row {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ff9100;
+}
+
+.signup-box__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.signup-box__item img,
+.signup-box__item p {
+  padding: 5px;
+}
+
+.signup-box__item:nth-child(-n + 4)::after {
+  content: url("../../assets/icons/rectangle.svg");
+  position: absolute;
+  right: 0;
+}
+
+.signup-box__item:nth-last-child() {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 /*# sourceMappingURL=style.css.map */
