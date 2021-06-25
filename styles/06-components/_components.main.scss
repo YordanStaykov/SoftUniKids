@@ -1,4 +1,8 @@
 .main {
 	display: grid;
 	grid-template-rows: 800px 560px 1000px;
+
+	&--trainers {
+		grid-template-rows: 550px 1400px 400px;
+	}
 }

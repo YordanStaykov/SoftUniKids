@@ -1,0 +1,60 @@
+.head-trainers {
+	border-bottom: 10px dotted $primary-50;
+	display: flex;
+	margin-top: 100px;
+}
+
+.trainer {
+	display: flex;
+	width: 50%;
+
+	&__img {
+		width: 175px;
+		height: 175px;
+		border: 10px solid $primary-300;
+		border-radius: 50%;
+	}
+
+	&__content {
+		margin: 0 0 0 50px;
+		width: 400px;
+	}
+
+	&__name {
+		font-family: $fontTypeTitles;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 24px;
+		color: $primary-300;
+		margin: 0;
+	}
+
+	&__qualification {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: $grey-400;
+	}
+}
+
+.secondary-trainers-wrapper {
+	margin: 100px 140px;
+	height: auto;
+	width: auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+}
+
+.secondary-trainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 70px;
+
+	.trainer__img:hover {
+		cursor: pointer;
+	}
+}

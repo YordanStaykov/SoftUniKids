@@ -348,6 +348,11 @@ a {
       grid-template-rows: 800px 560px 1000px;
 }
 
+.main--trainers {
+  -ms-grid-rows: 550px 1400px 400px;
+      grid-template-rows: 550px 1400px 400px;
+}
+
 .footer {
   height: 320px;
   background-color: #565656;
@@ -499,6 +504,11 @@ a {
       grid-template-rows: 74px 320px;
 }
 
+.header--trainers {
+  -ms-grid-rows: 74px 256px;
+      grid-template-rows: 74px 256px;
+}
+
 .header-info {
   position: relative;
   background-color: #44a9f8;
@@ -531,6 +541,21 @@ a {
   max-width: 650px;
   text-align: center;
   color: white;
+}
+
+.header-info--trainers {
+  background: #ffb402;
+}
+
+.header-info--trainers h1 {
+  color: white;
+  margin: 64px 0 24px 0;
+}
+
+.header-info--trainers p {
+  width: 850px;
+  color: white;
+  text-align: center;
 }
 
 .navigation-wrapper {
@@ -573,6 +598,8 @@ a {
 
 .program {
   background-color: #ff7100;
+  border-top: 10px dotted white;
+  border-bottom: 10px dotted white;
 }
 
 .program-wrapper {
@@ -899,6 +926,140 @@ a {
   text-decoration: underline;
   cursor: pointer;
   color: #ff9100;
+}
+
+.head-trainers {
+  border-bottom: 10px dotted #dff4f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 100px;
+}
+
+.trainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+}
+
+.trainer__img {
+  width: 175px;
+  height: 175px;
+  border: 10px solid #41bead;
+  border-radius: 50%;
+}
+
+.trainer__content {
+  margin: 0 0 0 50px;
+  width: 400px;
+}
+
+.trainer__name {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #41bead;
+  margin: 0;
+}
+
+.trainer__qualification {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #b2b2b2;
+}
+
+.secondary-trainers-wrapper {
+  margin: 100px 140px;
+  height: auto;
+  width: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+}
+
+.secondary-trainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 70px;
+}
+
+.secondary-trainer .trainer__img:hover {
+  cursor: pointer;
+}
+
+.join-the-team {
+  background: #66b9f8;
+  border-top: 12px solid #92cdfb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.join-the-team h1 {
+  color: white;
+}
+
+.join-the-team p {
+  color: white;
+  width: 850px;
+  text-align: center;
+}
+
+.join-the-team input {
+  width: 230px;
+  height: 50px;
+  margin: 15px;
+  text-indent: 10px;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.join-the-team input::-webkit-input-placeholder {
+  color: white;
+}
+
+.join-the-team input:-ms-input-placeholder {
+  color: white;
+}
+
+.join-the-team input::-ms-input-placeholder {
+  color: white;
+}
+
+.join-the-team input::placeholder {
+  color: white;
+}
+
+.join-the-team input:focus {
+  outline: none;
 }
 
 .bolded {

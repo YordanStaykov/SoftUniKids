@@ -2,6 +2,10 @@
 	position: relative;
 	display: grid;
 	grid-template-rows: 74px 320px;
+
+	&--trainers {
+		grid-template-rows: 74px 256px;
+	}
 }
 
 .header-info {
@@ -27,5 +31,20 @@
 		max-width: 650px;
 		text-align: center;
 		color: white;
+	}
+
+	&--trainers {
+		background: $secondary-600;
+
+		h1 {
+			color: white;
+			margin: 64px 0 24px 0;
+		}
+
+		p {
+			width: 850px;
+			color: white;
+			text-align: center;
+		}
 	}
 }
