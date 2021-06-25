@@ -5,8 +5,9 @@
 $fontType: "Lato", sans-serif;
 $fontTypeTitles: "Montserrat", sans-serif;
 
-html,
-* {
+header,
+main,
+footer {
 	font-family: $fontType;
 	color: $grey-700;
 }

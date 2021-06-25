@@ -8,59 +8,60 @@
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
 		0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 	border-radius: 12px;
-}
 
-.signup-box__button-container {
-	height: 100%;
-	border-top-left-radius: 12px;
-	border-bottom-left-radius: 12px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-right: black;
-	border-right-width: 10px;
-	border-right-style: dotted;
-}
-
-.signup-box__text {
-	display: flex;
-	flex-direction: column;
-}
-
-.signup-box__first-row {
-	font-style: normal;
-	font-weight: bold;
-	font-size: 18px;
-	line-height: 22px;
-}
-
-.signup-box__second-row {
-	font-family: $fontTypeTitles;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 20px;
-	line-height: 24px;
-	color: $secondary-800;
-}
-.signup-box__item {
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	img,
-	p {
-		padding: 5px;
+	&__button-container {
+		height: 100%;
+		border-top-left-radius: 12px;
+		border-bottom-left-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-right: black;
+		border-right-width: 10px;
+		border-right-style: dotted;
 	}
 
-	&:nth-child(-n + 4)::after {
-		content: url("../../assets/icons/rectangle.svg");
-		position: absolute;
-		right: 0;
+	&__text {
+		display: flex;
+		flex-direction: column;
 	}
 
-	&:nth-last-child() {
-		border-top-right-radius: 12px;
-		border-bottom-right-radius: 12px;
+	&__first-row {
+		font-style: normal;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+	&__second-row {
+		font-family: $fontTypeTitles;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 24px;
+		color: $secondary-800;
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img,
+		p {
+			padding: 5px;
+		}
+
+		&:nth-child(-n + 4)::after {
+			content: url("../../assets/icons/rectangle.svg");
+			position: absolute;
+			right: 0;
+		}
+
+		&:nth-last-child() {
+			border-top-right-radius: 12px;
+			border-bottom-right-radius: 12px;
+		}
 	}
 }

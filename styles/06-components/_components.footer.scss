@@ -1,0 +1,144 @@
+.footer {
+	height: 320px;
+	background-color: $grey-700;
+	border-top: 12px solid $grey-500;
+	position: relative;
+	color: white;
+	display: flex;
+
+	&__content {
+		padding: 64px 0;
+		height: 100%;
+		display: flex;
+	}
+
+	p:hover {
+		color: $primary-300;
+		cursor: pointer;
+	}
+}
+
+.footer-thingy-container {
+	width: 370px;
+	height: 100%;
+}
+
+.footer__thingy {
+	position: absolute;
+	bottom: 0;
+	left: 75px;
+}
+
+.softuni-kids {
+	height: auto;
+	margin: 0 50px 0 0;
+
+	&__title {
+		margin: 0 0 5px 0;
+	}
+
+	&__content {
+		display: grid;
+		grid-auto-flow: column;
+		grid-template-columns: 150px 140px;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+		p {
+			margin: 6px 0;
+			color: $grey-200;
+		}
+	}
+}
+
+.all-courses {
+	margin: 0 70px 0 0;
+
+	&__title {
+		margin: 0 0 5px 0;
+	}
+
+	&__content {
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+
+		p {
+			margin: 6px 0;
+			color: $grey-200;
+		}
+	}
+}
+
+.all-initiatives {
+	margin: 0 70px 0 0;
+
+	&__title {
+		margin: 0 0 5px 0;
+	}
+
+	&__content {
+		display: grid;
+		grid-template-rows: repeat(5, 1fr);
+
+		p {
+			margin: 6px 0;
+			color: $grey-200;
+		}
+	}
+}
+
+.find-us {
+	&__title {
+		margin: 0 0 5px 0;
+	}
+
+	&__icons {
+		padding: 24px 0 48px 0;
+		display: flex;
+	}
+
+	// &__icon {
+	// 	margin: 0 30px 0 0;
+	// 	color: $grey-200;
+	// }
+
+	&__text {
+		width: 180px;
+		color: $grey-500;
+	}
+
+	// .facebook:hover {
+	// 	cursor: pointer;
+	// }
+
+	// .instagram {
+	// 	cursor: pointer;
+	// }
+}
+
+.facebook-icon,
+.instagram-icon {
+	margin: 0 30px 0 0;
+	color: $grey-200;
+}
+
+.facebook-icon {
+	background: url("../../assets/icons/facebook.svg");
+	width: 29px;
+	height: 28px;
+
+	&:hover {
+		cursor: pointer;
+		background: url("../../assets/icons/facebook-pressed.svg");
+	}
+}
+
+.instagram-icon {
+	background: url("../../assets/icons/instagram.svg");
+	width: 28px;
+	height: 28px;
+
+	&:hover {
+		cursor: pointer;
+		background: url("../../assets/icons/instagram-pressed.svg");
+	}
+}

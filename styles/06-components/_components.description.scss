@@ -10,11 +10,22 @@
 	height: 320px;
 }
 
-.description__img {
+.description-img-container {
 	width: 440px;
 	height: 250px;
-	border-radius: 5px;
 	position: relative;
+}
+
+.description__img {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+
+.description-img-triangle {
+	position: absolute;
+	left: 188px;
+	top: 98px;
 }
 
 .description__explanations {
@@ -52,8 +63,4 @@
 .suitable-for__description,
 .knowledge-gained__description {
 	max-width: 488px;
-
-	span {
-		font-weight: 700;
-	}
 }
