@@ -1,0 +1,24 @@
+.directions {
+	background: $secondary-50;
+}
+
+.directions-wrapper {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.directions-container {
+	display: flex;
+}
+
+.direction {
+	width: 410px;
+}
+
+.directions__title,
+.direction__title {
+	color: $primary-300;
+}

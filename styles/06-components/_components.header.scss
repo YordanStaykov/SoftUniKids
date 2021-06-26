@@ -6,6 +6,10 @@
 	&--trainers {
 		grid-template-rows: 74px 256px;
 	}
+
+	&--contact {
+		grid-template-rows: 74px 426px;
+	}
 }
 
 .header-info {
@@ -46,5 +50,9 @@
 			color: white;
 			text-align: center;
 		}
+	}
+
+	&--contact {
+		background: url("../../assets/images/map.png");
 	}
 }
