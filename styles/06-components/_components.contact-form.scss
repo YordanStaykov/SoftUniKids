@@ -1,5 +1,5 @@
 .contact-form-container {
-	@include flex;
+	@extend %flex-centered;
 	flex-direction: column;
 
 	button {

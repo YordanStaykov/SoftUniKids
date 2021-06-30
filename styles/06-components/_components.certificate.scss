@@ -28,7 +28,7 @@
 
 .certificate-img-container {
 	width: 100%;
-	@include flex;
+	@extend %flex-centered;
 }
 
 .certificate__img {
@@ -36,7 +36,7 @@
 	width: 360px;
 	height: 260px;
 	border-radius: 12px;
-	@include flex;
+	@extend %flex-centered;
 
 	p {
 		font-weight: 500;

@@ -67,6 +67,18 @@ h1 {
   }
 }
 
+.signup-box__button-container, .signup-box__item, .certificate-img-container, .certificate__img, .join-the-team, .info-box-button-container, .directions-wrapper, .contact-form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -453,9 +465,6 @@ a {
   position: absolute;
   bottom: 0;
   left: 75px;
-}
-
-.footer__thingy:hover {
   -webkit-animation: rotate 5s linear infinite;
           animation: rotate 5s linear infinite;
 }
@@ -753,15 +762,6 @@ a {
   height: 100%;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border-right: 10px dotted transparent;
 }
 
@@ -793,15 +793,6 @@ a {
 
 .signup-box__item {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .signup-box__item img,
@@ -815,7 +806,7 @@ a {
   right: 0;
 }
 
-.signup-box__item:nth-last-child() {
+.signup-box__item:nth-last-child {
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
 }
@@ -935,15 +926,6 @@ a {
 
 .certificate-img-container {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .certificate__img {
@@ -951,15 +933,6 @@ a {
   width: 360px;
   height: 260px;
   border-radius: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .certificate__img p {
@@ -1115,15 +1088,6 @@ a {
 .join-the-team {
   background: #66b9f8;
   border-top: 12px solid #92cdfb;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1193,18 +1157,6 @@ a {
   margin: 10px 32px 25px 32px;
 }
 
-.info-box-button-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .info-box-item__title {
   font-size: 20px;
   color: #66b9f8;
@@ -1234,15 +1186,6 @@ a {
 
 .directions-wrapper {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1276,15 +1219,6 @@ a {
 }
 
 .contact-form-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
