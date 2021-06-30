@@ -13,12 +13,8 @@
 		height: 100%;
 		border-top-left-radius: 12px;
 		border-bottom-left-radius: 12px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-right: black;
-		border-right-width: 10px;
-		border-right-style: dotted;
+		@include flex;
+		border-right: 10px dotted transparent;
 	}
 
 	&__text {
@@ -44,9 +40,7 @@
 
 	&__item {
 		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		@include flex;
 
 		img,
 		p {

@@ -45,6 +45,28 @@ h1 {
   line-height: 44px;
 }
 
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -347,6 +369,38 @@ a {
   color: #ff9100;
   -webkit-box-shadow: none;
           box-shadow: none;
+  -webkit-transition: ease-in-out 0.3;
+  transition: ease-in-out 0.3;
+  position: relative;
+  z-index: 1;
+}
+
+.btn--transparent::before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  border: none;
+  border-radius: 100px;
+  background-color: #ff9100;
+}
+
+.btn--transparent:hover {
+  color: white;
+}
+
+.btn--transparent:hover::before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
 }
 
 .main {
@@ -399,6 +453,11 @@ a {
   position: absolute;
   bottom: 0;
   left: 75px;
+}
+
+.footer__thingy:hover {
+  -webkit-animation: rotate 5s linear infinite;
+          animation: rotate 5s linear infinite;
 }
 
 .softuni-kids {
@@ -620,8 +679,6 @@ a {
 
 .program {
   background-color: #ff7100;
-  border-top: 10px dotted white;
-  border-bottom: 10px dotted white;
 }
 
 .program-wrapper {
@@ -693,15 +750,13 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-right: black;
-  border-right-width: 10px;
-  border-right-style: dotted;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-right: 10px dotted transparent;
 }
 
 .signup-box__text {
@@ -735,12 +790,12 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .signup-box__item img,
@@ -877,12 +932,12 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .certificate__img {
@@ -893,12 +948,12 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .certificate__img p {
@@ -966,10 +1021,40 @@ a {
 }
 
 .trainer__img {
+  position: relative;
+}
+
+.trainer__img .img {
   width: 175px;
   height: 175px;
   border: 10px solid #41bead;
   border-radius: 50%;
+}
+
+.trainer__img .overlay {
+  width: 175px;
+  height: 175px;
+  border: 10px solid #41bead;
+  border-radius: 50%;
+  background-color: #ff9100;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  opacity: 0.8;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+.trainer__img:hover .overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
 }
 
 .trainer__content {
@@ -1021,26 +1106,22 @@ a {
   margin-bottom: 70px;
 }
 
-.secondary-trainer .trainer__img:hover {
-  cursor: pointer;
-}
-
 .join-the-team {
   background: #66b9f8;
   border-top: 12px solid #92cdfb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .join-the-team h1 {
@@ -1150,16 +1231,16 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .directions-container {
@@ -1181,16 +1262,16 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .contact-form-container button {

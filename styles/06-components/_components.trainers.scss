@@ -9,10 +9,36 @@
 	width: 50%;
 
 	&__img {
-		width: 175px;
-		height: 175px;
-		border: 10px solid $primary-300;
-		border-radius: 50%;
+		position: relative;
+
+		.img {
+			width: 175px;
+			height: 175px;
+			border: 10px solid $primary-300;
+			border-radius: 50%;
+		}
+
+		.overlay {
+			width: 175px;
+			height: 175px;
+			border: 10px solid $primary-300;
+			border-radius: 50%;
+			background-color: $secondary-800;
+			position: absolute;
+			top: 0;
+			left: 0px;
+			opacity: 0.8;
+			align-items: center;
+			justify-content: center;
+			display: none;
+		}
+
+		&:hover {
+			.overlay {
+				display: flex;
+				cursor: pointer;
+			}
+		}
 	}
 
 	&__content {
@@ -53,8 +79,4 @@
 	flex-direction: column;
 	align-items: center;
 	margin-bottom: 70px;
-
-	.trainer__img:hover {
-		cursor: pointer;
-	}
 }

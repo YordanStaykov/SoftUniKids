@@ -1,10 +1,8 @@
 .join-the-team {
 	background: $blue-300;
 	border-top: 12px solid $blue-200;
-	display: flex;
+	@include flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 
 	h1 {
 		color: white;
