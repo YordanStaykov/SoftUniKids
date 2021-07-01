@@ -56,4 +56,8 @@
 			z-index: -1;
 		}
 	}
+
+	@include for-iphone {
+		margin-right: 10px;
+	}
 }

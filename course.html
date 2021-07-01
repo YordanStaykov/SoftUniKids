@@ -13,8 +13,21 @@
 			<nav class="navigation">
 				<div class="navigation-wrapper container">
 					<div class="navigation__logo">
-						<img class="logo" src="./assets/logos/main.svg" />
+						<img
+							class="triagle"
+							src="./assets/icons/triangle-small.svg"
+						/>
+						<img src="./assets/logos/main.svg" />
 					</div>
+
+					<div class="navigation__logo navigation__logo--responsive">
+						<img
+							class="triagle"
+							src="./assets/icons/triangle-small-grey.svg"
+						/>
+						<img src="./assets/icons/main-small.svg" />
+					</div>
+
 					<ul class="navigation__menu">
 						<li class="navigation__item">
 							<a href="#" class="navigation__link"> обучения </a>
@@ -38,16 +51,24 @@
 								><img src="./assets/icons/search.svg" "></a
 							>
 						</li>
+
 						<button class="btn btn--small">вход</button>
+
+						<img
+							src="./assets/icons/menu.svg"
+							class="responsive-menu-icon"
+						/>
 					</ul>
 				</div>
 			</nav>
 
 			<div class="header-info">
 				<span class="header-info__label">начинаещ</span>
+
 				<h1 class="header-info__title">
 					Първи стъпки в програмирането - част 2
 				</h1>
+
 				<div class="signup-box container">
 					<!-- TODO fix the transparent border -->
 					<div class="signup-box__button-container">
@@ -151,45 +172,60 @@
 				</div>
 
 				<div class="description__explanations">
-					<div class="suitable-for">
+					<div class="explanation explanation--suitable-for">
 						<img
-							class="suitable-for__img"
+							class="explanation__img"
 							src="./assets/icons/people.svg"
 						/>
-						<article class="suitable-for__content">
-							<h1 class="suitable-for__title">
-								За кого е подходящ?
-							</h1>
-							<p class="suitable-for__description">
-								Онлайн курсът е подходящ
-								<span class="bolded">за напълно начинаещи</span
-								>: необходимо е децата да могат да четат и пишат
-								и да имат достъп до компютър с интернет връзка.
-							</p>
-						</article>
+
+						<h1 class="explanation__title">За кого е подходящ?</h1>
+
+						<p class="explanation__description">
+							Онлайн курсът е подходящ
+							<span class="bolded">за напълно начинаещи</span>:
+							необходимо е децата да могат да четат и пишат и да
+							имат достъп до компютър с интернет връзка.
+						</p>
 					</div>
 
-					<div class="knowledge-gained">
+					<div class="explanation explanation--aquired-skils">
 						<img
-							class="knowledge-gained__img"
+							class="explanation__img"
 							src="./assets/icons/puzzle.svg"
 						/>
-						<article class="knowledge-gained__content">
-							<h1 class="knowledge-gained__title">
-								Какво ще умее детето след курса?
-							</h1>
-							<div class="knowledge-gained__description">
-								<p>
-									При записване на второ дете
-									(братче/сестриче) получавате
-									<span class="bolded">20% отстъпка</span> от
-									таксата за второто дете.
-								</p>
-								<p>
-									Занятията стартират при сформиране на група.
-								</p>
-							</div>
-						</article>
+
+						<h1 class="explanation__title">
+							Какво ще умее детето след курса?
+						</h1>
+
+						<div class="explanation__description">
+							<p>
+								При записване на второ дете (братче/сестриче)
+								получавате
+								<span class="bolded">20% отстъпка</span> от
+								таксата за второто дете.
+							</p>
+							<p>Занятията стартират при сформиране на група.</p>
+						</div>
+					</div>
+
+					<div class="explanation explanation--important">
+						<img
+							class="explanation__img"
+							src="./assets/icons/notification.svg"
+						/>
+
+						<h1 class="explanation__title">Важно!</h1>
+
+						<div class="explanation__description">
+							<p>
+								При записване на второ дете (братче/сестриче)
+								получавате
+								<span class="bolded">20% отстъпка</span> от
+								таксата за второто дете.
+							</p>
+							<p>Занятията стартират при сформиране на група.</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -197,39 +233,58 @@
 			<!-- TODO Fix the border -->
 			<div class="program">
 				<div class="program-wrapper container">
-					<img class="book-icon" src="./assets/icons/book.svg" />
-					<div class="course-program">
-						<h1 class="course-program__title">
-							Програма на обучението
-						</h1>
-						<p class="course-program__description">
-							През цялото време на курса ще имаме постоянна
-							двустранна комуникация с децата. Ще имат възможност
-							да ни задават въпроси и да общуват помежду си
-							(най-вече в почивките и след занятия). Ще се
-							забавляваме докато учим как да прогамираме.
-						</p>
-						<p class="course-program__courses">занятия</p>
-						<select>
-							<option value="0">
-								1. Цикли и безкрайни цикли
-							</option>
-						</select>
-						<select>
-							<option value="1">2. Събития</option>
-						</select>
-						<select>
-							<option value="2">
-								3. Презентационни умения. Създаване на цялостен
-								сценарий в Scratch.
-							</option>
-						</select>
-						<select>
-							<option value="3">
-								4. Работа по финален проект и презентирането му.
-							</option>
-						</select>
+					<div class="explanation-and-options-wrapper">
+						<div class="explanation explanation--program">
+							<img
+								class="explanation__img"
+								src="./assets/icons/book.svg"
+							/>
+
+							<h1 class="explanation__title">
+								Програма на обучението
+							</h1>
+
+							<div class="explanation__description">
+								<p>
+									През цялото време на курса ще имаме
+									постоянна двустранна комуникация с децата.
+									Ще имат възможност да ни задават въпроси и
+									да общуват помежду си (най-вече в почивките
+									и след занятия). Ще се забавляваме докато
+									учим как да прогамираме.
+								</p>
+							</div>
+						</div>
+
+						<div class="program-options">
+							<p class="program-options__title">занятия</p>
+
+							<select class="program-options__select">
+								<option value="0">
+									1. Цикли и безкрайни цикли
+								</option>
+							</select>
+
+							<select class="program-options__select">
+								<option value="1">2. Събития</option>
+							</select>
+
+							<select class="program-options__select">
+								<option value="2">
+									3. Презентационни умения. Създаване на
+									цялостен сценарий в Scratch.
+								</option>
+							</select>
+
+							<select class="program-options__select">
+								<option value="3">
+									4. Работа по финален проект и презентирането
+									му.
+								</option>
+							</select>
+						</div>
 					</div>
+
 					<div class="laptop-img-container">
 						<img
 							class="laptop-img"
@@ -241,17 +296,24 @@
 
 			<div class="certificate container">
 				<div class="title-and-img-container">
-					<div class="certificate__description">
-						<img src="./assets/icons/reward.svg" />
-						<div>
-							<h1>Сертификат</h1>
+					<div class="explanation explanation--certificate">
+						<img
+							class="explanation__img"
+							src="./assets/icons/reward.svg"
+						/>
+
+						<h1 class="explanation__title">Сертификат</h1>
+
+						<div class="explanation__description">
 							<p>
 								Да се опише максимално подробно кога и къде се
 								провеждат занятията. За примера съм изпозлвал
 								описание от онлайн курс
 							</p>
+							<p>Занятията стартират при сформиране на група.</p>
 						</div>
 					</div>
+
 					<div class="certificate-img-container">
 						<div class="certificate__img">
 							<p>Снимка на сертификата</p>
@@ -259,104 +321,96 @@
 					</div>
 				</div>
 
-				<div class="bottom-paragraphs-container">
-					<div class="when-and-where-info">
+				<div class="bottom-explanations-container">
+					<div class="explanation explanation--when-and-where">
 						<img
-							class="when-and-where-info__icon"
+							class="explanation__img"
 							src="./assets/icons/clock.svg"
 						/>
 
-						<div class="when-and-where-info__content">
-							<h1 class="when-and-where-info__title">
-								Кога и къде се провеждат занятията?
-							</h1>
+						<h1 class="explanation__title">
+							Кога и къде се провеждат занятията?
+						</h1>
 
-							<div class="when-and-where-info__text">
-								<p>
-									Да се опише максимално подробно
-									<span class="bolded">кога</span> и
-									<span class="bolded">къде</span> се
-									провеждат занятията. За примера съм
-									изпозлвал описание от онлайн курс.
-								</p>
+						<div class="explanation__description">
+							<p>
+								Да се опише максимално подробно
+								<span class="bolded">кога</span> и
+								<span class="bolded">къде</span> се провеждат
+								занятията. За примера съм изпозлвал описание от
+								онлайн курс.
+							</p>
 
-								<p>
-									Курсът е в
-									<span class="bolded">ОНЛАЙН ФОРМАТ</span>.
-									Обучението се провежда в рамките на
-									<span class="bolded"
-										>2 астрономически часa</span
-									>, веднъж седмично в продължение на
-									<span class="bolded">4 седмици</span>.
-								</p>
+							<p>
+								Курсът е в
+								<span class="bolded">ОНЛАЙН ФОРМАТ</span>.
+								Обучението се провежда в рамките на
+								<span class="bolded">2 астрономически часa</span
+								>, веднъж седмично в продължение на
+								<span class="bolded">4 седмици</span>.
+							</p>
 
-								<p>
-									Денят и часа зависят от групата, в която
-									запишете детето си. Занятията ще се проведат
-									в онлайн платформа, за която ще получите
-									линк преди занятието, с който да достъпите
-									виртуалната ни класна стая.
-								</p>
+							<p>
+								Денят и часа зависят от групата, в която
+								запишете детето си. Занятията ще се проведат в
+								онлайн платформа, за която ще получите линк
+								преди занятието, с който да достъпите
+								виртуалната ни класна стая.
+							</p>
 
-								<p>
-									<span class="bolded"
-										>Крайният срок за записване е
-										05/06/2020, 23:59 часа
-										включително.</span
-									>
-								</p>
-							</div>
+							<p>
+								<span class="bolded"
+									>Крайният срок за записване е 05/06/2020,
+									23:59 часа включително.</span
+								>
+							</p>
 						</div>
 					</div>
 
-					<div class="additional-info">
+					<div class="explanation explanation--additional-info">
 						<img
+							class="explanation__img"
 							src="./assets/icons/lightbulb.svg"
-							class="additional-info__icon"
 						/>
 
-						<div class="additional-info__content">
-							<h1 class="additional-info__title">
-								Допълнителна информация
-							</h1>
+						<h1 class="explanation__title">
+							Допълнителна информация
+						</h1>
 
-							<div class="additional-info__text">
-								<p>
-									В деня на първото занятие на вашето дете ще
-									имаме нужда от
-									<span class="bolded"
-										>два подписани и попълнени екземпляра на
-										договор</span
-									>
-									за обучение в SoftUni Kids. Ще получите
-									договора на имейл адреса ви, след
-									заплащането на обучението. Може да го
-									разгледате от
-									<span class="bolded hovered">тук</span>.
-								</p>
+						<div class="explanation__description">
+							<p>
+								В деня на първото занятие на вашето дете ще
+								имаме нужда от
+								<span class="bolded"
+									>два подписани и попълнени екземпляра на
+									договор</span
+								>
+								за обучение в SoftUni Kids. Ще получите договора
+								на имейл адреса ви, след заплащането на
+								обучението. Може да го разгледате от
+								<span class="bolded hovered">тук</span>.
+							</p>
 
-								<p>
-									За успешното провеждане на занятията трябва
-									да осигурите на детето си
-									<span class="bolded"
-										>компютър, интернет връзка и спокойна
-										среда за работа</span
-									>. За по-лесна комуникация ще получите
-									достъп до група в социалните мрежи, където
-									преподавателите ще помагат на децата при
-									затруднения в достъпа до виртуалната ни
-									класна стая.
-								</p>
+							<p>
+								За успешното провеждане на занятията трябва да
+								осигурите на детето си
+								<span class="bolded"
+									>компютър, интернет връзка и спокойна среда
+									за работа</span
+								>. За по-лесна комуникация ще получите достъп до
+								група в социалните мрежи, където преподавателите
+								ще помагат на децата при затруднения в достъпа
+								до виртуалната ни класна стая.
+							</p>
 
-								<p>Почивен ден за групите - няма.</p>
+							<p>Почивен ден за групите - няма.</p>
 
-								<p>
-									<span class="bolded"
-										>Запазването на място става единствено
-										след успешно заплащане.</span
-									>
-								</p>
-							</div>
+							<p>
+								<span class="bolded"
+									>Запазването на място става единствено след
+									успешно заплащане.</span
+								>
+							</p>
 						</div>
 					</div>
 				</div>
@@ -366,67 +420,59 @@
 		<footer class="footer">
 			<div class="footer-thingy-container">
 				<img
-					class="footer__thingy"
+					class="footer-thingy"
 					src="./assets/logos/footer-thingy.svg"
 				/>
 			</div>
 
-			<div class="footer-content-wrapper">
-				<div class="footer__content">
-					<div class="softuni-kids">
-						<h3 class="softuni-kids__title">Softuni Kids</h3>
-						<div class="softuni-kids__content">
-							<p>Начало</p>
-							<p>Летни академии</p>
-							<p>Преподаватели</p>
-							<p>Блог</p>
-							<p>Контакти</p>
-							<p>Общи условия</p>
-							<p>Лични данни</p>
-						</div>
-					</div>
-
-					<div class="all-courses">
-						<h3 class="all-courses__title">Всички обучения</h3>
-						<div class="all-courses__content">
-							<p>Курсове</p>
-							<p>Събития</p>
-						</div>
-					</div>
-
-					<div class="all-initiatives">
-						<h3 class="all-initiatives__title">
-							Всички инициативи
-						</h3>
-						<div class="all-initiatives__content">
-							<p>Software University</p>
-							<p>SoftUni Digital</p>
-							<p>SoftUni Creative</p>
-							<p>SoftUni Svetlina</p>
-							<p>SoftUni Foundation</p>
-						</div>
-					</div>
-
-					<div class="find-us">
-						<h3 class="find-us__title">Намери ни</h3>
-						<div class="find-us__icons">
-							<!-- <img
-								src="./assets/icons/facebook.svg"
-								class="find-us__icon facebook"
-							/>
-							<img
-								src="./assets/icons/instagram.svg"
-								class="find-us__icon instagram"
-							/> -->
-							<div class="facebook-icon"></div>
-							<div class="instagram-icon"></div>
-						</div>
-
-						<div class="find-us__text">
-							© 2016-2020 - SoftUni Kids. All Rights Reserved.
-						</div>
+			<div class="footer-content">
+				<div class="footer-item">
+					<h3 class="footer-item__title">Softuni Kids</h3>
+					<div class="footer-item__content">
+						<p>Начало</p>
+						<p>Летни академии</p>
+						<p>Преподаватели</p>
+						<p>Блог</p>
+						<p>Контакти</p>
+						<p>Общи условия</p>
+						<p>Лични данни</p>
 					</div>
 				</div>
+
+				<div class="footer-item">
+					<h3 class="footer-item__title">Всички обучения</h3>
+					<div class="footer-item__content">
+						<p>Курсове</p>
+						<p>Събития</p>
+					</div>
+				</div>
+
+				<div class="footer-item">
+					<h3 class="footer-item__title">Всички инициативи</h3>
+					<div class="footer-item__content">
+						<p>Software University</p>
+						<p>SoftUni Digital</p>
+						<p>SoftUni Creative</p>
+						<p>SoftUni Svetlina</p>
+						<p>SoftUni Foundation</p>
+					</div>
+				</div>
+
+				<div class="find-us">
+					<h3 class="find-us__title">Намери ни</h3>
+					<div class="find-us__icons">
+						<div class="facebook-icon"></div>
+						<div class="instagram-icon"></div>
+					</div>
+
+					<div class="find-us__text">
+						© 2016-2020 - SoftUni Kids. All Rights Reserved.
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-info-responsive">
+				© 2016-2020 - SoftUni Kids. All Rights Reserved.
 			</div>
 		</footer>
 	</body>

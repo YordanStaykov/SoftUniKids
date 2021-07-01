@@ -1,0 +1,106 @@
+.explanation {
+	display: grid;
+	grid-template-columns: 64px 1fr;
+	grid-template-rows: auto 1fr;
+	grid-template-areas:
+		"img title"
+		". description";
+
+	@include for-iphone {
+		grid-template-areas:
+			"img title"
+			"description description";
+
+		&__img {
+			grid-area: img;
+		}
+
+		&__title {
+			grid-area: title;
+		}
+
+		&__description {
+			grid-area: description;
+		}
+	}
+
+	&__img {
+		width: 32px;
+		height: 32px;
+		grid-area: img;
+	}
+
+	&__title {
+		margin: 0;
+		grid-area: title;
+
+		@include for-iphone {
+			font-size: 30px;
+		}
+	}
+
+	&__description {
+		grid-area: description;
+	}
+
+	&--suitable-for,
+	&--aquired-skils {
+		.explanation__description {
+			max-width: 488px;
+		}
+
+		@include for-iphone {
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+
+	&--suitable-for {
+		border-right: 10px dotted $secondary-100;
+
+		@include for-iphone {
+			border-right: none;
+			border-bottom: 10px dotted $secondary-100;
+			padding-bottom: 20px;
+		}
+	}
+
+	&--aquired-skils {
+		padding-left: 50px;
+
+		@include for-iphone {
+			padding-left: 0;
+			padding-top: 20px;
+		}
+	}
+
+	&--important {
+		display: none;
+	}
+
+	&--certificate {
+		width: 50%;
+	}
+
+	&--when-and-where {
+		width: 50%;
+		border-right: 10px dotted $secondary-100;
+
+		@include for-iphone {
+			width: 335px;
+			border-right: none;
+			border-bottom: 10px dotted $secondary-100;
+			padding: 30px 0;
+		}
+	}
+
+	&--additional-info {
+		padding-left: 50px;
+		width: 50%;
+
+		@include for-iphone {
+			width: 335px;
+			padding: 30px 0;
+		}
+	}
+}

@@ -1,6 +1,10 @@
 .main {
 	display: grid;
-	grid-template-rows: 800px 560px 1000px;
+	grid-template-rows: 800px 560px 850px;
+
+	@include for-iphone {
+		grid-template-rows: 2050px 760px 1150px;
+	}
 
 	&--trainers {
 		grid-template-rows: 550px 1400px 400px;

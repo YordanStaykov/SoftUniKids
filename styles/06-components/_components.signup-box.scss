@@ -44,6 +44,11 @@
 		position: relative;
 		@extend %flex-centered;
 
+		@include for-iphone {
+			justify-content: start;
+			padding-left: 20px;
+		}
+
 		img,
 		p {
 			padding: 5px;
@@ -53,11 +58,24 @@
 			content: url("../../assets/icons/rectangle.svg");
 			position: absolute;
 			right: 0;
+
+			@include for-iphone {
+				content: url(../../assets/icons/rectangle-down.svg);
+				left: 20px;
+				bottom: 0;
+			}
 		}
 
 		&:nth-last-child() {
 			border-top-right-radius: 12px;
 			border-bottom-right-radius: 12px;
 		}
+	}
+
+	@include for-iphone {
+		grid-template-columns: 1fr;
+		grid-template-rows: 150px 1fr 1fr 1fr 1fr;
+		height: 560px;
+		bottom: -500px;
 	}
 }

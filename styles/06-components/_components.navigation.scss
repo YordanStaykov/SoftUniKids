@@ -3,6 +3,10 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
+	@include for-iphone {
+		// width: 100%;
+	}
 }
 
 .navigation__menu {
@@ -10,9 +14,33 @@
 	align-items: center;
 }
 
+.navigation__logo {
+	@extend %flex-centered;
+
+	.triagle {
+		padding-right: 16px;
+	}
+
+	&--responsive {
+		display: none;
+	}
+
+	@include for-iphone {
+		display: none;
+
+		&--responsive {
+			display: flex;
+		}
+	}
+}
+
 .navigation__item {
 	list-style: none;
 	margin: 15px 10px;
+
+	@include for-iphone {
+		display: none;
+	}
 }
 
 .navigation__link {
@@ -23,5 +51,13 @@
 	&:hover {
 		cursor: pointer;
 		color: $secondary-800;
+	}
+}
+
+.responsive-menu-icon {
+	display: none;
+
+	@include for-iphone {
+		display: block;
 	}
 }

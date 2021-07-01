@@ -1,33 +1,17 @@
 .title-and-img-container {
 	display: flex;
-}
+	align-items: center;
+	justify-content: space-between;
+	height: 400px;
+	width: 100%;
 
-.certificate__description {
-	display: flex;
-	align-items: flex-start;
-	padding: 150px 150px 150px 0;
-
-	div {
-		padding-left: 20px;
-	}
-
-	img {
-		margin-top: 10px;
-		width: 32px;
-		height: 32px;
-	}
-
-	h1 {
-		margin: 0;
-	}
-
-	p {
-		width: 560px;
+	@include for-iphone {
+		display: none;
 	}
 }
 
 .certificate-img-container {
-	width: 100%;
+	width: 50%;
 	@extend %flex-centered;
 }
 
@@ -45,38 +29,11 @@
 	}
 }
 
-.bottom-paragraphs-container {
+.bottom-explanations-container {
+	width: 100%;
 	display: flex;
-}
 
-.when-and-where-info,
-.additional-info {
-	width: 50%;
-	display: flex;
-	justify-content: flex-start;
-
-	img {
-		width: 32px;
-		height: 32px;
-		margin: 28px 15px 0 0;
+	@include for-iphone {
+		flex-direction: column;
 	}
-}
-
-.when-and-where-info__content,
-.additional-info__content {
-	width: 544px;
-}
-
-.when-and-where-info {
-	border-right: 10px dotted $secondary-100;
-}
-
-.additional-info {
-	margin-left: 50px;
-}
-
-.hovered {
-	text-decoration: underline;
-	cursor: pointer;
-	color: $secondary-800;
 }

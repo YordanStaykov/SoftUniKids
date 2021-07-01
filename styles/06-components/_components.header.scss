@@ -35,6 +35,11 @@
 		max-width: 650px;
 		text-align: center;
 		color: white;
+
+		@include for-iphone {
+			width: 85%;
+			font-size: 30px;
+		}
 	}
 
 	&--trainers {

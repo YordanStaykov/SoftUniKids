@@ -1,19 +1,44 @@
+.description {
+	@include for-iphone {
+		width: 375px;
+		margin: 0;
+	}
+}
+
 .text-and-img-container {
 	padding-top: 100px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	@include for-iphone {
+		padding-top: 0px;
+		width: 375px;
+		margin-top: 550px;
+		flex-direction: column;
+	}
 }
 
 .description__text {
 	width: 740px;
 	height: 320px;
+
+	@include for-iphone {
+		width: 335px;
+		height: 620px;
+		margin-bottom: 30px;
+	}
 }
 
 .description-img-container {
 	width: 440px;
 	height: 250px;
 	position: relative;
+
+	@include for-iphone {
+		width: 335px;
+		height: 190px;
+	}
 }
 
 .description__img {
@@ -24,43 +49,18 @@
 
 .description-img-triangle {
 	position: absolute;
-	left: 188px;
-	top: 98px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .description__explanations {
 	margin-top: 80px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-}
 
-.suitable-for {
-	display: flex;
-	border-right: 10px dotted $secondary-100;
-}
-
-.knowledge-gained {
-	display: flex;
-	padding-left: 50px;
-}
-
-.suitable-for__content,
-.knowledge-gained__content {
-	padding: 0 30px;
-}
-
-.suitable-for__img,
-.knowledge-gained__img {
-	width: 32px;
-	height: 32px;
-}
-
-.suitable-for__title,
-.knowledge-gained__title {
-	margin: 0;
-}
-
-.suitable-for__description,
-.knowledge-gained__description {
-	max-width: 488px;
+	@include for-iphone {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
+	}
 }

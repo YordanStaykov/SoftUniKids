@@ -3,6 +3,7 @@
 
 @import "./02-tools/tools.animations";
 @import "./02-tools/tools.placeholders";
+@import "./02-tools/tools.mixins";
 
 @import "./03-generic/generic.normalize";
 
@@ -10,6 +11,7 @@
 
 @import "./05-objects/objects.containers";
 
+@import "./06-components/components.explanations";
 @import "./06-components/components.button";
 @import "./06-components/components.main";
 @import "./06-components/components.footer";
@@ -26,3 +28,4 @@
 @import "./06-components/components.contact-form";
 
 @import "./99-utilities/utilities.bolded";
+@import "./99-utilities/utilities.hovered";

@@ -1,0 +1,5 @@
+@mixin for-iphone {
+	@media (max-width: 375px) {
+		@content;
+	}
+}

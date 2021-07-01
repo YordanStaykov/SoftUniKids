@@ -3,13 +3,58 @@
 	background-color: $grey-700;
 	border-top: 12px solid $grey-500;
 	position: relative;
-	color: white;
+	color: $grey-200;
 	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
-	&__content {
+	@include for-iphone {
+		height: 650px;
+	}
+
+	&-content {
 		padding: 64px 0;
-		height: 100%;
+		width: 90%;
+		margin: 0 auto;
 		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		@include for-iphone {
+			display: grid;
+			grid-template-rows: 270px 150px;
+			grid-template-columns: 165px 165px;
+			grid-auto-flow: column;
+			padding-bottom: 20px;
+			border-bottom: 1px solid $grey-600;
+		}
+	}
+
+	&-item {
+		margin-right: 50px;
+
+		@include for-iphone {
+			margin-right: 0;
+		}
+
+		&__title {
+			margin: 0 0 16px 0;
+		}
+
+		&__content {
+			display: grid;
+			grid-template-rows: repeat(5, auto);
+			grid-auto-flow: column;
+
+			@include for-iphone {
+				grid-template-rows: auto;
+				grid-auto-flow: unset;
+			}
+
+			p {
+				margin: 6px 24px 6px 0;
+			}
+		}
 	}
 
 	p:hover {
@@ -21,112 +66,86 @@
 .footer-thingy-container {
 	width: 370px;
 	height: 100%;
+
+	@include for-iphone {
+		display: none;
+	}
 }
 
-.footer__thingy {
+.footer-thingy {
 	position: absolute;
 	bottom: 0;
 	left: 75px;
 	animation: rotate 5s linear infinite;
-}
 
-.softuni-kids {
-	height: auto;
-	margin: 0 50px 0 0;
-
-	&__title {
-		margin: 0 0 5px 0;
-	}
-
-	&__content {
-		display: grid;
-		grid-auto-flow: column;
-		grid-template-columns: 150px 140px;
-		grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-
-		p {
-			margin: 6px 0;
-			color: $grey-200;
-		}
-	}
-}
-
-.all-courses {
-	margin: 0 70px 0 0;
-
-	&__title {
-		margin: 0 0 5px 0;
-	}
-
-	&__content {
-		display: grid;
-		grid-template-rows: 1fr 1fr;
-
-		p {
-			margin: 6px 0;
-			color: $grey-200;
-		}
-	}
-}
-
-.all-initiatives {
-	margin: 0 70px 0 0;
-
-	&__title {
-		margin: 0 0 5px 0;
-	}
-
-	&__content {
-		display: grid;
-		grid-template-rows: repeat(5, 1fr);
-
-		p {
-			margin: 6px 0;
-			color: $grey-200;
-		}
+	@include for-iphone {
+		display: none;
 	}
 }
 
 .find-us {
 	&__title {
 		margin: 0 0 5px 0;
+
+		@include for-iphone {
+			display: none;
+		}
 	}
 
 	&__icons {
 		padding: 24px 0 48px 0;
 		display: flex;
+
+		@include for-iphone {
+			transform: translateY(-50%);
+		}
 	}
 
 	&__text {
 		width: 180px;
 		color: $grey-500;
+
+		@include for-iphone {
+			display: none;
+		}
+	}
+
+	.facebook-icon,
+	.instagram-icon {
+		margin: 0 30px 0 0;
+		color: $grey-200;
+		height: 28px;
+	}
+
+	.facebook-icon {
+		background: url("../../assets/icons/facebook.svg");
+		width: 29px;
+
+		&:hover {
+			cursor: pointer;
+			background: url("../../assets/icons/facebook-pressed.svg");
+		}
+	}
+
+	.instagram-icon {
+		background: url("../../assets/icons/instagram.svg");
+		width: 28px;
+
+		&:hover {
+			cursor: pointer;
+			background: url("../../assets/icons/instagram-pressed.svg");
+		}
 	}
 }
 
-.facebook-icon,
-.instagram-icon {
-	margin: 0 30px 0 0;
-	color: $grey-200;
-}
+.footer-info-responsive {
+	display: none;
 
-.facebook-icon {
-	background: url("../../assets/icons/facebook.svg");
-	width: 29px;
-	height: 28px;
-
-	&:hover {
-		cursor: pointer;
-		background: url("../../assets/icons/facebook-pressed.svg");
-	}
-}
-
-.instagram-icon {
-	background: url("../../assets/icons/instagram.svg");
-	width: 28px;
-	height: 28px;
-
-	&:hover {
-		cursor: pointer;
-		background: url("../../assets/icons/instagram-pressed.svg");
+	@include for-iphone {
+		width: 335px;
+		display: block;
+		height: 100px;
+		color: $grey-500;
+		text-align: center;
 	}
 }

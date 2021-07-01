@@ -11,8 +11,21 @@
 			<nav class="navigation">
 				<div class="navigation-wrapper container">
 					<div class="navigation__logo">
-						<img class="logo" src="./assets/logos/main.svg" />
+						<img
+							class="triagle"
+							src="./assets/icons/triangle-small.svg"
+						/>
+						<img src="./assets/logos/main.svg" />
 					</div>
+
+					<div class="navigation__logo navigation__logo--responsive">
+						<img
+							class="triagle"
+							src="./assets/icons/triangle-small-grey.svg"
+						/>
+						<img src="./assets/icons/main-small.svg" />
+					</div>
+
 					<ul class="navigation__menu">
 						<li class="navigation__item">
 							<a href="#" class="navigation__link"> обучения </a>
@@ -36,7 +49,13 @@
 								><img src="./assets/icons/search.svg" "></a
 							>
 						</li>
+
 						<button class="btn btn--small">вход</button>
+
+						<img
+							src="./assets/icons/menu.svg"
+							class="responsive-menu-icon"
+						/>
 					</ul>
 				</div>
 			</nav>
@@ -365,67 +384,59 @@
 		<footer class="footer">
 			<div class="footer-thingy-container">
 				<img
-					class="footer__thingy"
+					class="footer-thingy"
 					src="./assets/logos/footer-thingy.svg"
 				/>
 			</div>
 
-			<div class="footer-content-wrapper">
-				<div class="footer__content">
-					<div class="softuni-kids">
-						<h3 class="softuni-kids__title">Softuni Kids</h3>
-						<div class="softuni-kids__content">
-							<p>Начало</p>
-							<p>Летни академии</p>
-							<p>Преподаватели</p>
-							<p>Блог</p>
-							<p>Контакти</p>
-							<p>Общи условия</p>
-							<p>Лични данни</p>
-						</div>
-					</div>
-
-					<div class="all-courses">
-						<h3 class="all-courses__title">Всички обучения</h3>
-						<div class="all-courses__content">
-							<p>Курсове</p>
-							<p>Събития</p>
-						</div>
-					</div>
-
-					<div class="all-initiatives">
-						<h3 class="all-initiatives__title">
-							Всички инициативи
-						</h3>
-						<div class="all-initiatives__content">
-							<p>Software University</p>
-							<p>SoftUni Digital</p>
-							<p>SoftUni Creative</p>
-							<p>SoftUni Svetlina</p>
-							<p>SoftUni Foundation</p>
-						</div>
-					</div>
-
-					<div class="find-us">
-						<h3 class="find-us__title">Намери ни</h3>
-						<div class="find-us__icons">
-							<!-- <img
-								src="./assets/icons/facebook.svg"
-								class="find-us__icon facebook"
-							/>
-							<img
-								src="./assets/icons/instagram.svg"
-								class="find-us__icon instagram"
-							/> -->
-							<div class="facebook-icon"></div>
-							<div class="instagram-icon"></div>
-						</div>
-
-						<div class="find-us__text">
-							© 2016-2020 - SoftUni Kids. All Rights Reserved.
-						</div>
+			<div class="footer-content">
+				<div class="footer-item">
+					<h3 class="footer-item__title">Softuni Kids</h3>
+					<div class="footer-item__content">
+						<p>Начало</p>
+						<p>Летни академии</p>
+						<p>Преподаватели</p>
+						<p>Блог</p>
+						<p>Контакти</p>
+						<p>Общи условия</p>
+						<p>Лични данни</p>
 					</div>
 				</div>
+
+				<div class="footer-item">
+					<h3 class="footer-item__title">Всички обучения</h3>
+					<div class="footer-item__content">
+						<p>Курсове</p>
+						<p>Събития</p>
+					</div>
+				</div>
+
+				<div class="footer-item">
+					<h3 class="footer-item__title">Всички инициативи</h3>
+					<div class="footer-item__content">
+						<p>Software University</p>
+						<p>SoftUni Digital</p>
+						<p>SoftUni Creative</p>
+						<p>SoftUni Svetlina</p>
+						<p>SoftUni Foundation</p>
+					</div>
+				</div>
+
+				<div class="find-us">
+					<h3 class="find-us__title">Намери ни</h3>
+					<div class="find-us__icons">
+						<div class="facebook-icon"></div>
+						<div class="instagram-icon"></div>
+					</div>
+
+					<div class="find-us__text">
+						© 2016-2020 - SoftUni Kids. All Rights Reserved.
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-info-responsive">
+				© 2016-2020 - SoftUni Kids. All Rights Reserved.
 			</div>
 		</footer>
 	</body>
