@@ -5,11 +5,20 @@
 	position: relative;
 	color: $grey-200;
 	display: flex;
-	flex-direction: column;
 	justify-content: space-between;
 
 	@include for-iphone {
+		flex-direction: column;
 		height: 650px;
+	}
+
+	&-thingy-container {
+		height: 100%;
+		width: 450px;
+
+		@include for-iphone {
+			display: none;
+		}
 	}
 
 	&-content {
@@ -31,12 +40,6 @@
 	}
 
 	&-item {
-		margin-right: 50px;
-
-		@include for-iphone {
-			margin-right: 0;
-		}
-
 		&__title {
 			margin: 0 0 16px 0;
 		}
@@ -57,18 +60,21 @@
 		}
 	}
 
+	&-info-responsive {
+		display: none;
+
+		@include for-iphone {
+			width: 335px;
+			display: block;
+			height: 100px;
+			color: $grey-500;
+			text-align: center;
+		}
+	}
+
 	p:hover {
 		color: $primary-300;
 		cursor: pointer;
-	}
-}
-
-.footer-thingy-container {
-	width: 370px;
-	height: 100%;
-
-	@include for-iphone {
-		display: none;
 	}
 }
 
@@ -135,17 +141,5 @@
 			cursor: pointer;
 			background: url("../../assets/icons/instagram-pressed.svg");
 		}
-	}
-}
-
-.footer-info-responsive {
-	display: none;
-
-	@include for-iphone {
-		width: 335px;
-		display: block;
-		height: 100px;
-		color: $grey-500;
-		text-align: center;
 	}
 }

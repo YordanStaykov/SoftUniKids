@@ -5,6 +5,10 @@
 
 	&--trainers {
 		grid-template-rows: 74px 256px;
+
+		@include for-iphone {
+			grid-template-rows: 74px 356px;
+		}
 	}
 
 	&--contact {
@@ -54,6 +58,10 @@
 			width: 850px;
 			color: white;
 			text-align: center;
+
+			@include for-iphone {
+				width: 335px;
+			}
 		}
 	}
 

@@ -2,6 +2,12 @@
 	border-bottom: 10px dotted $primary-50;
 	display: flex;
 	margin-top: 100px;
+
+	@include for-iphone {
+		flex-direction: column;
+		justify-content: space-around;
+		margin-top: 0;
+	}
 }
 
 .secondary-trainers-wrapper {
@@ -11,18 +17,37 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(4, 1fr);
+
+	@include for-iphone {
+		grid-template-columns: 1fr;
+		margin: 100px 0;
+	}
 }
 
 .secondary-trainer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	margin-bottom: 70px;
+
+	&:nth-last-child(-n + 12) {
+		@include for-iphone {
+			display: none;
+		}
+	}
 }
 
 .trainer {
 	display: flex;
 	width: 50%;
+
+	@include for-iphone {
+		width: auto;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 
 	&__img {
 		position: relative;
@@ -60,6 +85,14 @@
 	&__content {
 		margin: 0 0 0 50px;
 		width: 400px;
+
+		@include for-iphone {
+			margin: 0;
+			width: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 
 	&__name {

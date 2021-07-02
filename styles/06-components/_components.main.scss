@@ -8,6 +8,10 @@
 
 	&--trainers {
 		grid-template-rows: 550px 1400px 400px;
+
+		@include for-iphone {
+			grid-template-rows: 1400px 1400px 700px;
+		}
 	}
 
 	&--contact {
