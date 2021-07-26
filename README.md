@@ -1,1 +1,1 @@
-# Did a copy of the SoftUni Kids web page using HTML and SASS
+# A copy of the SoftUni Kids web page done using HTML and SASS only
